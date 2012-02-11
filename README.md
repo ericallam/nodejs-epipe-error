@@ -8,3 +8,10 @@ parent process.
 
 The parent process (in `cli.js`) spawns the `child.js` script using `spawn`, and then
 logs the exit code on the child process.
+
+### Steps to reproduce:
+
+Using node 0.6.x, just do:
+
+ - `npm install`
+ - `node cli.js`
