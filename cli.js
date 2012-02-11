@@ -4,16 +4,8 @@ var spawn = require("child_process").spawn;
 var doSpawn = function(callback){
   var child = spawn('child.js');
 
-  child.stdout.on('data', function(data){
-    console.log("Child stdout: " + data);
-  });
-
-  child.stderr.on('data', function(data){
-    console.log("Child stderr: " + data);
-  });
-
   child.on('exit', function(code){
-    callback(code);
+    console.log("Child exited with code " + code);
   });
 
   child.stdin.write("ping");
@@ -21,7 +13,7 @@ var doSpawn = function(callback){
 };
 
 
-doSpawn(function(code){
-  console.log("Child exited with code " + code);
-});
+doSpawn();
+
+setTimeout(function(){}, 10000);
 
