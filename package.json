@@ -1,0 +1,15 @@
+{
+  "name": "fork-spawn-issue",
+  "description": "Recreating the fork/spawn Error: read EBADF",
+  "version": "0.0.1",
+  "maintainers": [{"email": "eric@envylabs.com"}],
+  "engines": {
+    "node": "0.6.7",
+    "npm": "1.0.106"
+  },
+  "dependencies": {
+    "express": "2.5.4"
+  }
+}
+
+
